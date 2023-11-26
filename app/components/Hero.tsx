@@ -1,36 +1,16 @@
 import React from "react";
 import Image from "next/image";
-import img from "@/app/images/index";
-import Script from "next/script";
-import Head from "next/head";
-//import Link from "next/link";
-
-const { hero } = img;
+import hero from "@/public/images/hero.png";
+import nextjs from "@/public/images/nextjs-logo.png";
+import plscale from "@/public/images/plscale-logo.png";
+import clerk from "@/public/images/clerk-logo.png";
+import prisma from "@/public/images/prisma-logo.png";
+import typescript from "@/public/images/ts-logo.png";
+import Link from "next/link";
 
 const Hero = () => {
-  const handleCalendlyClick = () => {
-    Calendly.initPopupWidget({
-      url: "https://calendly.com/zapiapp/initial-meeting",
-    });
-    return false;
-  };
   return (
     <>
-      <Head>
-        <link
-          href="https://assets.calendly.com/assets/external/widget.css"
-          rel="stylesheet"
-        />
-      </Head>
-      <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
-        onLoad={() =>
-          console.log(
-            `script loaded correctly, window.Calendly is now available`
-          )
-        }
-      />
       {/* Hero section */}
       <div className="relative isolate overflow-hidden backdrop-contrast-25 bg-gray-900 pb-16 pt-14 sm:pb-20">
         <Image
@@ -54,73 +34,70 @@ const Hero = () => {
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-                Announcing our next round of funding.{" "}
-                <a href="#" className="font-semibold text-white">
-                  <span className="absolute inset-0" aria-hidden="true" />
-                  Read more <span aria-hidden="true">&rarr;</span>
-                </a>
-              </div>
-            </div>
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 Streamline Your Business with ZapiApp Solutions
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-300">
-                We specialise in creating bespoke web applications and designing
-                business websites. Let us help you save time and money.
+                We specialise in creating bespoke web applications and business
+                websites. <br />
+                Let us help you save time and money.
               </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
+              <div className="mt-20 flex items-center justify-center gap-x-6">
+                <Link
                   href="#"
-                  className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+                  className="rounded-md bg-[#F13223] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
                   Get in touch
-                </a>
-                <button
-                  onClick={handleCalendlyClick}
+                </Link>
+                <Link
+                  href="https://calendly.com/zapiapp/initial-meeting"
+                  target="_blank"
                   className="text-sm font-semibold leading-6 text-white"
                 >
                   book a meeting <span aria-hidden="true">→</span>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
-
+          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-100 ring-1 ring-white/10 hover:ring-white/20">
+              Tech Stack We Love Working With.{" "}
+            </div>
+          </div>
           {/* Logo cloud */}
           <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
             <Image
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/transistor-logo-white.svg"
+              src={clerk}
               alt="Transistor"
               width={158}
               height={48}
             />
             <Image
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/reform-logo-white.svg"
+              src={plscale}
               alt="Reform"
               width={158}
               height={48}
             />
             <Image
               className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/tuple-logo-white.svg"
+              src={nextjs}
               alt="Tuple"
               width={158}
               height={48}
             />
             <Image
               className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/savvycal-logo-white.svg"
+              src={prisma}
               alt="SavvyCal"
               width={158}
               height={48}
             />
             <Image
               className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/statamic-logo-white.svg"
+              src={typescript}
               alt="Statamic"
               width={158}
               height={48}
