@@ -55,11 +55,11 @@ const Nav = () => {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
-                  href="#"
-                  className="rounded-md bg-[#F13223] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-                >
-                  Get in touch
-                </Link>
+              href="#"
+              className="rounded-md bg-[#F13223] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+            >
+              Get in touch
+            </Link>
           </div>
         </nav>
         <Dialog
@@ -95,7 +95,7 @@ const Nav = () => {
                     >
                       {item.name}
                     </a> */}
-                  ))}
+                  {/* ))} */}
                 </div>
                 <div className="py-6">
                   <a
